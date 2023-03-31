@@ -32,6 +32,24 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 
 `git clone https://user:TOKEN@ghproxy.com/https://github.com/xxxx/xxxx` [#71](https://github.com/hunshcn/gh-proxy/issues/71)
 
+终端命令行: 
+           支持终端命令行 git clone , wget , curl 等工具下载.
+           支持 raw.githubusercontent.com , gist.github.com , gist.githubusercontent.com 文件下载.
+           注意：不支持 SSH Key 方式 git clone 下载.
+
+           git clone
+           git clone https://ghproxy.com/https://github.com/stilleshan/ServerStatus
+
+           git clone 私有仓库
+           Clone 私有仓库需要用户在 Personal access tokens 申请 Token 配合使用.
+           git clone https://user:your_token@ghproxy.com/https://github.com/your_name/your_private_repo
+
+           wget & curl
+           wget https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
+           wget https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
+           curl -O https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
+           curl -O https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
+
 以下都是合法输入（仅示例，文件不存在）：
 
 - 分支源码：https://github.com/hunshcn/project/archive/master.zip
